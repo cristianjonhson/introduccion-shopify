@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "header": {
+      "type": "header"
+    },
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "title": "Bienvenido a nuestra tienda",
+        "subtitle": "Descubre productos increíbles"
+      }
+    },
+    "featured-products": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 8
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "featured-products"
+  ]
+}

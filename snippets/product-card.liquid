@@ -1,0 +1,25 @@
+<!-- Tarjeta de producto reutilizable -->
+<div class="product-card">
+  <a href="{{ product.url }}">
+    <div class="product-image">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+      {% else %}
+        <div class="no-image">Sin imagen</div>
+      {% endif %}
+    </div>
+
+    <div class="product-info">
+      <h3 class="product-title">{{ product.title }}</h3>
+      
+      <div class="product-price">
+        {% if product.compare_at_price > product.price %}
+          <span class="price-sale">{{ product.price | money }}</span>
+          <span class="price-compare">{{ product.compare_at_price | money }}</span>
+        {% else %}
+          <span class="price">{{ product.price | money }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</div>

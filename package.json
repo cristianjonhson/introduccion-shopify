@@ -1,0 +1,17 @@
+{
+  "name": "introduccion-shopify",
+  "version": "1.0.0",
+  "description": "Proyecto de introducción a Shopify",
+  "scripts": {
+    "start": "shopify theme dev",
+    "push": "shopify theme push",
+    "pull": "shopify theme pull"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "ecommerce"
+  ],
+  "author": "",
+  "license": "MIT"
+}
