@@ -1,0 +1,7 @@
+# Configuración de Shopify CLI
+# Reemplaza 'tu-tienda' con el nombre de tu tienda de desarrollo
+
+store: tu-tienda.myshopify.com
+
+# Opcional: especificar el tema
+# theme_id: 123456789
