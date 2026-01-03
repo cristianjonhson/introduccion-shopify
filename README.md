@@ -79,13 +79,26 @@ Antes de comenzar, asegúrate de tener instalado:
    shopify auth login
    ```
 
+5. **Crea o conecta una tienda de desarrollo:**
+   
+   Si no tienes una tienda de desarrollo, puedes crear una desde tu [cuenta de Shopify Partners](https://partners.shopify.com/):
+   - Ve a "Tiendas" → "Agregar tienda" → "Crear tienda de desarrollo"
+   - Una vez creada, copia la URL de tu tienda (ej: `mi-tienda-dev.myshopify.com`)
+
 ## 🚀 Uso
 
 ### Desarrollo Local
 
-Para iniciar el servidor de desarrollo local:
+Para iniciar el servidor de desarrollo local, necesitas especificar tu tienda:
 
 ```bash
+shopify theme dev --store=tu-tienda.myshopify.com
+```
+
+O puedes configurar la variable de entorno:
+
+```bash
+export SHOPIFY_FLAG_STORE=tu-tienda.myshopify.com
 shopify theme dev
 ```
 
@@ -96,7 +109,7 @@ Esto abrirá tu tema en un navegador con recarga en caliente. Los cambios que ha
 Para subir tu tema a Shopify:
 
 ```bash
-shopify theme push
+shopify theme push --store=tu-tienda.myshopify.com
 ```
 
 ### Descargar el Tema
@@ -104,8 +117,13 @@ shopify theme push
 Para descargar cambios desde Shopify:
 
 ```bash
-shopify theme pull
+shopify theme pull --store=tu-tienda.myshopify.com
 ```
+
+> **Tip:** Para evitar escribir `--store` en cada comando, puedes crear un archivo `.shopify-cli.yml` en la raíz del proyecto con:
+> ```yaml
+> store: tu-tienda.myshopify.com
+> ```
 
 ## 📄 Archivos Principales
 
